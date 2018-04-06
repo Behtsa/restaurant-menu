@@ -1,6 +1,6 @@
 import React from 'react';
 import { Jumbotron, Button } from 'reactstrap';
-//import Order from './Order';
+
 
 const Order = (props) => {
     return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, CardTitle, Row, Col } from 'reactstrap';
+import { Card, Button, CardTitle, Row, Col, CardImg } from 'reactstrap';
 
 
 export default class Dishes extends Component {
@@ -12,13 +12,12 @@ export default class Dishes extends Component {
 			return(
 				<div>
 					<Row>
-              
-              {this.dishes.map(item => <Card body className = 'col-md-6'>
+              {this.dishes.map(item => <Card body className = 'col-md-4'>
+                  <CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
                   <CardTitle>{item.item}</CardTitle>
                   <Button>Agregar</Button>
                 </Card>
               )}
-              
             </Row>
 				</div>)
 		}
