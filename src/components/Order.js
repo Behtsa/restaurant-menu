@@ -4,7 +4,6 @@ import { Jumbotron, Button } from 'reactstrap';
 
 const Order = (props) => {
     return (
-        <div className="col-md-4 col-lg-4 offset-md-8">
             <Jumbotron>
                 <h1 className="display-3">Orden</h1>
                 <p className="lead text-left">Producto</p>
@@ -14,7 +13,6 @@ const Order = (props) => {
                     <Button color="primary col">Enviar Orden</Button>
                 </p>
             </Jumbotron>
-        </div>
     );
 };
 
