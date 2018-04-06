@@ -11,7 +11,7 @@ const Order = (props) => {
                 <hr className="my-2" />
                 <p className="text-left">TOTAL</p>
                 <p className="lead">
-                    <Button color="primary col-md-3 offset-md-9">Enviar Orden</Button>
+                    <Button color="primary col">Enviar Orden</Button>
                 </p>
             </Jumbotron>
         </div>

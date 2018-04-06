@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import Dish from './Dish.js'
 
-export default class Example extends React.Component {
+export default class Menu extends React.Component {
   constructor(props) {
     super(props);
-
+    this.breakfast = props.data;
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1'
@@ -27,8 +28,9 @@ export default class Example extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
-            >
+              >
               Desayuno
+              <Dish data = {this.breakfast}/>
             </NavLink>
           </NavItem>
           <NavItem className="col-lg-3">

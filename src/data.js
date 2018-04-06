@@ -1,69 +1,55 @@
 const menu = {
     breakfast:[{
+        item: "Club Sandwich",
+        price: 5
+    }, {
+        item: "Hot cakes",
+        price: 7
+    },{
+        item: "Huevos",
+        price: 10
+    },{
+        item: "Sincronizadas",
+        price: 7
+    }],
+    lunch:[{
+        item: "Enchiladas",
+        price: 5
+    }, {
+        item: "Pozole",
+        price: 7
+    },{
+        item: "Birria",
+        price: 10
+    },{
+        item: "Sopes",
+        price: 7
+    }],
+    hamburguers:[{
+        item: "Queso & Tocino",
+        price: 5
+    }, {
+        item: "Pollo",
+        price: 7
+    },{
+        item: "Vegetariana",
+        price: 10
+    },{
+        item: "Pollo & Jamón",
+        price: 7
+    }],
+    beverages:[{
         item: "Café americano",
         price: 5
     }, {
         item: "Café con leche",
         price: 7
     },{
-        item: "Sandwich de jamón y queso",
+        item: "Agua",
         price: 10
     },{
         item: "Jugo natural",
         price: 7
-    }],
-    food:[{
-        burguers:[{
-            item:"simple",
-            price: 10
-        },{
-            item:"doble",
-            price: 25
-        }],
-        snacks:[{
-            
-        }]
     }]
-
 }
 export default menu;
-// const menu = {
-// 	grill: [{
-// 		product: 'Whopper BBQ',
-// 		price: 79
-// 	},
-// 	{
-// 		product: 'Whopper con Queso',
-// 		price: 79
-// 	},
-// 	{
-// 		product: 'Hamburguesa con Queso',
-// 		price: 79
-// 	},
-// 	{
-// 		product: 'Whopper Doble con Queso',
-// 		price: 79
-// 	},
-// 	{
-// 		product: 'Hamburguesa con Queso y Tocino',
-// 		price: 79
-// 	},
-// 	{
-// 		product: 'Whopper Angry',
-// 		price: 79
-// 	},
-// 	{
-// 		product: 'Whopper Jr con Queso',
-// 		price: 79
-// 	}],
-// 	chicken: [{}],
-// 	salad: [{}],
-// 	breakfast: [{}],
-// 	beverages: [{}],
-// 	complements: [{}],
-// 	desserts: [{}],
-// 	promo: [{}],
-// 	children: [{}]
-// }
-
-// export default menu;
