@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-
 export default class Dish extends Component {
-		constructor(props) {
-			super(props);
-			this.dishes = props.data;
-		}
+	constructor(props) {
+		super(props);
+		this.dishName = props.dishName;
+	}
 
-		show() {
-			console.log(this);
-		}
-
-		render() {
-			return(
-				<div>{this.show()}</div>)
-		}
+	render() {
+		return(
+			<div>
+				<h6>{this.dishName}</h6>
+			</div>)
+		console.log(this.dishName);
+	}
 }
-

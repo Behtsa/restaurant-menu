@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import Dish from './Dish.js'
+import Dishes from './Dishes.js'
 
 export default class Menu extends React.Component {
   constructor(props) {
     super(props);
-    this.breakfast = props.data;
+    this.breakfast = props.breakfast;
+    this.lunch = props.lunch;
+    this.hamburguers = props.hamburguers;
+    this.beverages = props.beverages;
+
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1'
@@ -30,7 +34,6 @@ export default class Menu extends React.Component {
               onClick={() => { this.toggle('1'); }}
               >
               Desayuno
-              <Dish data = {this.breakfast}/>
             </NavLink>
           </NavItem>
           <NavItem className="col-lg-3">
@@ -60,27 +63,38 @@ export default class Menu extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <Row>
-              <Col sm="12">
-                <h4>Tab 1 Contents</h4>
-              </Col>
-            </Row>
+            <Dishes breakfast = {this.breakfast} />
           </TabPane>
           <TabPane tabId="2">
             <Row>
               <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
+              {this.lunch.map(item => <Card body>
+                  <CardTitle>{item.item}</CardTitle>
+                  <Button>Agregar</Button>
                 </Card>
+              )}
               </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId="3">
+            <Row>
               <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
+              {this.hamburguers.map(item => <Card body>
+                  <CardTitle>{item.item}</CardTitle>
+                  <Button>Agregar</Button>
                 </Card>
+              )}
+              </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId="4">
+            <Row>
+              <Col sm="6">
+              {this.beverages.map(item => <Card body>
+                  <CardTitle>{item.item}</CardTitle>
+                  <Button>Agregar</Button>
+                </Card>
+              )}
               </Col>
             </Row>
           </TabPane>
