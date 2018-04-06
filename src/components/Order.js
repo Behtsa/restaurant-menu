@@ -4,7 +4,7 @@ import { Jumbotron, Button } from 'reactstrap';
 
 const Order = (props) => {
     return (
-            <Jumbotron>
+            <Jumbotron className ="col-md-4 col-lg-4">
                 <h1 className="display-3">Orden</h1>
                 <p className="lead text-left">Producto</p>
                 <hr className="my-2" />
