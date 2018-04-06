@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className = " row">
         <Menu breakfast = {data.breakfast} lunch = {data.lunch} hamburguers = {data.hamburguers} beverages = {data.beverages}/>
-        <Order className ="col-md-4 col-lg-4 offset-md-8"/>
+        <Order className ="col-md-4 col-lg-4 offset-md-8 offset-lg-8"/>
       </div>
     );
   }

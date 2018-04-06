@@ -63,40 +63,16 @@ export default class Menu extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <Dishes breakfast = {this.breakfast} />
+            <Dishes food = {this.breakfast} />
           </TabPane>
           <TabPane tabId="2">
-            <Row>
-              <Col sm="6">
-              {this.lunch.map(item => <Card body>
-                  <CardTitle>{item.item}</CardTitle>
-                  <Button>Agregar</Button>
-                </Card>
-              )}
-              </Col>
-            </Row>
+            <Dishes food = {this.lunch} />
           </TabPane>
           <TabPane tabId="3">
-            <Row>
-              <Col sm="6">
-              {this.hamburguers.map(item => <Card body>
-                  <CardTitle>{item.item}</CardTitle>
-                  <Button>Agregar</Button>
-                </Card>
-              )}
-              </Col>
-            </Row>
+            <Dishes food = {this.hamburguers} />
           </TabPane>
           <TabPane tabId="4">
-            <Row>
-              <Col sm="6">
-              {this.beverages.map(item => <Card body>
-                  <CardTitle>{item.item}</CardTitle>
-                  <Button>Agregar</Button>
-                </Card>
-              )}
-              </Col>
-            </Row>
+            <Dishes food = {this.beverages} />
           </TabPane>
         </TabContent>
       </div>
