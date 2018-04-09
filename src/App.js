@@ -8,11 +8,23 @@ import Order from './components/Order';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { order:{
+      item: "",
+      price: "",
+      quantity: 0
+      }
+    }
+  }
+
+
+
   render() {
     return (
       <div className = " row">
-        <Menu breakfast = {data.breakfast} lunch = {data.lunch} hamburguers = {data.hamburguers} beverages = {data.beverages}/>
-        <Order className ="col-md-4 col-lg-4 offset-md-8 offset-lg-8"/>
+        <Menu order={this.state.order} breakfast = {data.breakfast} lunch = {data.lunch} hamburguers = {data.hamburguers} beverages = {data.beverages}/>
+        <Order order ={this.state.order } className ="col-md-4 col-lg-4 offset-md-8 offset-lg-8"/>
       </div>
     );
   }
