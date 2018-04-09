@@ -6,16 +6,26 @@ export default class Dishes extends Component {
 		constructor(props) {
 			super(props);
 			this.dishes = props.food;
+			this.handleClick = this.handleClick.bind(this);	
 		}
 
+		handleClick(item, price){
+			Object.assign(this.props.order, { item: item, price: price, quantity: this.props.order.quantity + 1 })
+			console.log(this.props.order);
+			
+	}
+
 		render() {
+			console.log(this.props.order);
+			//console.log(this.order);
+			
 			return(
 				<div>
 					<Row>
               {this.dishes.map(item => <Card body className = 'col-md-4'>
                   <CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
                   <CardTitle>{item.item}</CardTitle>
-                  <Button>Agregar</Button>
+									<Button onClick={() => { this.handleClick(item.item, item.price)}  }>Agregar</Button>
                 </Card>
               )}
             </Row>
