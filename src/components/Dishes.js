@@ -12,13 +12,13 @@ export default class Dishes extends Component {
 			return(
 				<div>
 					<Row>
-              {this.dishes.map(item => <Card body className = 'col-md-4'>
-                  <CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
-                  <CardTitle>{item.item}</CardTitle>
-                  <Button>Agregar</Button>
-                </Card>
-              )}
-            </Row>
+              			{this.dishes.map(item => <Card body className = 'col-md-4'>
+                  			<CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
+                  			<CardTitle>{item.item}</CardTitle>
+                  			<Button>Agregar</Button>
+                			</Card>
+              			)}
+            		</Row>
 				</div>)
 		}
 }

@@ -3,7 +3,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, Ca
 import classnames from 'classnames';
 import Dishes from './Dishes.js'
 
-export default class Menu extends React.Component {
+export default class Menu extends Component {
   constructor(props) {
     super(props);
     this.breakfast = props.breakfast;
