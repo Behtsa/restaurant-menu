@@ -22,6 +22,15 @@ export default class Dishes extends Component {
 			return(
 				<div>
 					<Row>
+<<<<<<< HEAD
+              			{this.dishes.map(item => <Card body className = 'col-md-4'>
+                  			<CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
+                  			<CardTitle>{item.item}</CardTitle>
+                  			<Button>Agregar</Button>
+                			</Card>
+              			)}
+            		</Row>
+=======
               {this.dishes.map(item => <Card body className = 'col-md-4'>
                   <CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
                   <CardTitle>{item.item}</CardTitle>
@@ -29,6 +38,7 @@ export default class Dishes extends Component {
                 </Card>
               )}
             </Row>
+>>>>>>> 1365f208345e5cb62c7fe1564b0ddc28036ddbed
 				</div>)
 		}
 }
