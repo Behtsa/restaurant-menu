@@ -61,18 +61,18 @@ export default class Menu extends React.Component {
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}>
+        <TabContent  activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <Dishes food = {this.breakfast} />
+            <Dishes order={this.props.order} food = {this.breakfast} />
           </TabPane>
           <TabPane tabId="2">
-            <Dishes food = {this.lunch} />
+            <Dishes order={this.props.order} food = {this.lunch} />
           </TabPane>
           <TabPane tabId="3">
-            <Dishes food = {this.hamburguers} />
+            <Dishes order={this.props.order} food = {this.hamburguers} />
           </TabPane>
           <TabPane tabId="4">
-            <Dishes food = {this.beverages} />
+            <Dishes order={this.props.order} food = {this.beverages} />
           </TabPane>
         </TabContent>
       </div>
