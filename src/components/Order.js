@@ -7,7 +7,13 @@ export default class Order extends Component {
         super (props);
 
     }
-    render () {
+
+    showOrder(){
+        this.props.order.map(item)
+        
+
+    }
+    render () {        
 
         return (
                 <Jumbotron className ="col-md-4 col-lg-4">
