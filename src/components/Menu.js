@@ -63,16 +63,16 @@ export default class Menu extends Component {
         </Nav>
         <TabContent  activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <Dishes order={this.props.order} food = {this.breakfast} />
+            <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.breakfast} />
           </TabPane>
           <TabPane tabId="2">
-            <Dishes order={this.props.order} food = {this.lunch} />
+            <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.lunch} />
           </TabPane>
           <TabPane tabId="3">
-            <Dishes order={this.props.order} food = {this.hamburguers} />
+            <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.hamburguers} />
           </TabPane>
           <TabPane tabId="4">
-            <Dishes order={this.props.order} food = {this.beverages} />
+            <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.beverages} />
           </TabPane>
         </TabContent>
       </div>
