@@ -29,7 +29,7 @@ export default class Dishes extends Component {
              {this.dishes.map(item => <Card body className = 'col-md-4'>
                <CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
                <CardTitle>{item.item}</CardTitle>
-               <Button>Agregar</Button>
+               <Button onClick={()=>this.handleOrder(item.item, item.price)}>Agregar</Button>
                 </Card>
               )}
            </Row>

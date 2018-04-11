@@ -14,6 +14,7 @@ class App extends Component {
     this.state = { order:[],
       food : 
     }
+    this.upDateOrder=this.upDateOrder.bind(this)
   }
 
   upDateOrder(orders){
@@ -27,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className = " row">
-        <Menu order={this.state.order} breakfast={data.breakfast} lunch={data.lunch} hamburguers={data.hamburguers} beverages={data.beverages} upDateOrder={this.upDateOrder.bind(this)}/>
+        <Menu order={this.state.order} breakfast={data.breakfast} lunch={data.lunch} hamburguers={data.hamburguers} beverages={data.beverages} upDateOrder={this.upDateOrder}/>
         <Order order ={this.state.order } className ="col-md-4 col-lg-4 offset-md-8 offset-lg-8"/>
       </div>
     );
