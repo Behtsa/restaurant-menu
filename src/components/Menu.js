@@ -34,7 +34,7 @@ export default class Menu extends Component {
         </Nav>
         <Switch>
           <Route path='/breakfast' render = {() => {
-            return <Dishes order={this.props.order} food = {this.breakfast} />
+            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.breakfast} />
           }} />
           <Route path='/meals' render = {() => {
             return <Dishes order={this.props.order} food = {this.lunch} />

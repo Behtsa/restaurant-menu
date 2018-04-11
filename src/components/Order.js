@@ -11,6 +11,7 @@ export default class Order extends Component {
     render () {        
         console.log(this.props.order);
         let { order } = this.props;
+        const total = order.map(item=>item.price)        
         
         return (
                 <Jumbotron className ="col-md-4 col-lg-4">
@@ -22,10 +23,8 @@ export default class Order extends Component {
                              </div>) })}
                     <hr className="my-2" />
                     <p className="text-left">TOTAL</p>
-                    {(order && order.lenght > 0 
-                        ? order.reduce((value, order) => value + order.price)
-                        : 0
-                    )}
+                    { total.length>0?
+                        total.reduce((a, b) => a + b):0 }
                     <p className="lead">
                         <Button color="primary col">Enviar Orden</Button>
                     </p>
