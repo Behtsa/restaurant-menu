@@ -8,17 +8,17 @@ export default class Order extends Component {
 
     }
 
-    showOrder(){
-        this.props.order.map(item)
+    // showOrder(){
+    //     this.props.order.map(item)
         
 
-    }
+    // }
     render () {        
 
         return (
                 <Jumbotron className ="col-md-4 col-lg-4">
                     <h1 className="display-3">Orden</h1>
-                    <p className="lead text-left">{this.props.item}</p>
+                    <p className="lead text-left"></p>
                     <hr className="my-2" />
                     <p className="text-left">TOTAL</p>
                     <p className="lead">
