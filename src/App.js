@@ -11,7 +11,8 @@ import Order from './components/Order';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { order:[]
+    this.state = { order:[],
+      food : 
     }
     this.upDateOrder=this.upDateOrder.bind(this)
   }
