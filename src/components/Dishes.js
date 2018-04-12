@@ -6,7 +6,6 @@ import Order from './Order';
 export default class Dishes extends Component {
         constructor(props) {
             super(props);
-            this.dishes = props.food;
             this.handleOrder = this.handleOrder.bind(this); 
         }
 
@@ -26,11 +25,13 @@ export default class Dishes extends Component {
             return(
                 <div>
                     <Row>
-                      {this.dishes.map(item => 
+                      {this.props.food.map(item => 
                       <Card body className = 'col-md-4'>
-                        <CardImg top width="100%" src={item.src} alt="Card image cap" height="250px" />
+                        <CardImg top width="100%" src={item.src} alt="Card image cap" height="200px" />
                         <CardTitle>{item.item}</CardTitle>
-                        <Button onClick={()=>this.handleOrder(item.item, item.price)}>Agregar</Button>
+                        <Row>
+                            <Button color="secondary" className="col-md-offset-2 col-md-2">-</Button><input className="col-md-2" placeholder="0"></input><Button color="info" className="col-md-2" onClick={()=>this.handleOrder(item.item, item.price)}>+</Button>
+                        </Row>
                       </Card>
                       )}
                     </Row>
