@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Jumbotron, Button } from 'reactstrap';
+import { Jumbotron, Button, Row, Col } from 'reactstrap';
 import '../Menu.css';
 
 
@@ -15,17 +15,21 @@ export default class Order extends Component {
         const total = order.map(item=>item.price)        
         
         return (
-                <Jumbotron className ="col-md-4 col-lg-4">
+                <Jumbotron id="orderSumary" className ="col-md-4 col-lg-4">
                     <h1 className="display-3">Orden</h1>
                      {order.map(item=>{
-                     return ( <div>
-                                 <p className="lead text-left">{item.item}</p>
-                                 <p className="lead text-right">{item.price}</p>   
-                             </div>) })}
+                     return ( <Row>
+                                <Col><p className="lead text-left">{item.item}</p></Col>
+                                <Col><p className="lead text-right">{item.price}</p></Col>
+                             </Row>) })}
                     <hr className="my-2" />
-                    <p className="text-left">TOTAL</p>
-                    { total.length>0?
-                        total.reduce((a, b) => a + b):0 }
+                    <Row>
+                        <Col><p className="text-left">TOTAL</p></Col>
+                        < Col className = "lead text-right" > < bold > $ {
+                            total.length > 0 ? total.reduce((a, b) => a + b) : 0
+                        } < /bold></Col >
+
+                    </Row>
                     <p className="lead">
                         <Button color="primary col">Enviar Orden</Button>
                     </p>
