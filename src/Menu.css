@@ -1,13 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
 
+* {
+	font-family: 'Comfortaa', cursive;
+}
+
 .link {
 	color: black;
-	font-family: 'Comfortaa', cursive;
-	font-size: 1.1em;
+	font-size: .9em;
 	font-weight: 700;
 	line-height: 50px;
 	letter-spacing: 4px;
 	text-decoration: none !important;
 	padding: 20px;
 	margin: 0 auto;
+}
+
+.link:hover {
+	color: orange;
 }
