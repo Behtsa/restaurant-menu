@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Jumbotron, Button } from 'reactstrap';
+import '../Menu.css';
 
 
 export default class Order extends Component {
