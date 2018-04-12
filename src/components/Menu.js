@@ -4,7 +4,10 @@ import classnames from 'classnames';
 import Dishes from './Dishes.js'
 import Test from './Test'
 import { Route, Switch, Link } from 'react-router-dom';
-
+/*
+<Route exact path='/breakfast' render = {() => {
+            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.breakfast} />
+          }} />*/
 
 export default class Menu extends Component {
   constructor(props) {
@@ -14,7 +17,7 @@ export default class Menu extends Component {
     this.hamburguers = props.hamburguers;
     this.beverages = props.beverages;
   }
-// <Dishes order={this.props.order} food = {this.breakfast} />
+
   render() {
     return (
       <div className="col-lg-8">
@@ -32,15 +35,18 @@ export default class Menu extends Component {
               <Link to='/beverages'>Bebidas</Link>
           </NavItem>
         </Nav>
+  
         <Switch>
-          <Route path='/breakfast' render = {() => {
+          <Route exact path='/breakfast' render = {() => {
             return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.breakfast} />
           }} />
-          <Route path='/meals' render = {() => {
-            return <Dishes order={this.props.order} food = {this.lunch} />
+          <Route exact path='/meals' render = {() => {
+            return <Dishes order={this.props.order} food={this.lunch} />
           }} />
-          <Route path='/hamburguers' component = {Test}/>
-          <Route path='/beverages' render = {() => {
+          <Route exact path='/hamburguers' render = {() => {
+            return <Dishes order={this.props.order} food = {this.hamburguers} />
+          }} />
+          <Route exact path='/beverages' render = {() => {
             return <Dishes order={this.props.order} food = {this.beverages} />
           }} />
         </Switch>
