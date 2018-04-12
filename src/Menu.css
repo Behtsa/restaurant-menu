@@ -19,6 +19,11 @@
 	color: orange;
 }
 
+
+#orderSumary {
+	background-color: beige;
+
+}
 .btn-info {
 	background-color: orange !important;
 	border-color: orange !important;
