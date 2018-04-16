@@ -25,9 +25,9 @@ export default class Order extends Component {
                     <hr className="my-2" />
                     <Row>
                         <Col><p className="text-left">TOTAL</p></Col>
-                        < Col className = "lead text-right" > < bold > $ {
+                        < Col className = "lead text-right" > <bold> $ {
                             total.length > 0 ? total.reduce((a, b) => a + b) : 0
-                        } < /bold></Col >
+                        } </bold></Col >
 
                     </Row>
                     <p className="lead">
