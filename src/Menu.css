@@ -19,7 +19,37 @@
 	color: orange;
 }
 
+
 #orderSumary {
 	background-color: beige;
 
+}
+.btn-info {
+	background-color: orange !important;
+	border-color: orange !important;
+}
+
+.btn-info:hover {
+	background-color: orange !important;
+}
+
+input {
+	background-color: beige;
+	border: none;
+	text-align: center;
+	outline: none;
+}
+.btn-info:hover, .btn-secondary:hover {
+	transform: scale(1.1);
+}
+
+.price_info{
+	position: absolute;
+	right: 20px;
+}
+
+.btn-primary{
+	background-color: orange !important;
+    border-color: orange !important;
+    outline: none;;
 }

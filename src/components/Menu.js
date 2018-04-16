@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import Dishes from './Dishes.js'
+import Welcome from './Welcome'
 import '../Menu.css';
 import { Route, Switch, Link } from 'react-router-dom';
 /*
@@ -37,17 +38,18 @@ export default class Menu extends Component {
         </Nav>
   
         <Switch>
+          <Route exact path='/' component = {Welcome} />
           <Route exact path='/breakfast' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.breakfast} />
+            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.breakfast} />
           }} />
           <Route exact path='/meals' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food={this.lunch} />
+            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food={this.lunch} />
           }} />
           <Route exact path='/hamburguers' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.hamburguers} />
+            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.hamburguers} />
           }} />
           <Route exact path='/beverages' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.beverages} />
+            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.beverages} />
           }} />
         </Switch>
       </div>
