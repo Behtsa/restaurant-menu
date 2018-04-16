@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card, Button, CardTitle, Row, Col, CardImg } from 'reactstrap';
 import Order from './Order';
+import '../Menu.css';
+
 
 
 export default class Dishes extends Component {
@@ -21,6 +23,12 @@ export default class Dishes extends Component {
             this.props.upDateOrder(this.props.order)    
         }
 
+        handleRemoveDish(item) {
+          this.props.removeFromOrder(item);
+        }
+
+
+
         render() {          
             return(
                 <div>
@@ -28,9 +36,9 @@ export default class Dishes extends Component {
                       {this.props.food.map(item => 
                       <Card body className = 'col-md-4'>
                         <CardImg top width="100%" src={item.src} alt="Card image cap" height="200px" />
-                        <CardTitle>{item.item}</CardTitle>
+                        <CardTitle>{item.item}<p className="price_info">${item.price}</p></CardTitle>
                         <Row>
-                            <Button color="secondary" className="col-md-offset-2 col-md-2">-</Button><input className="col-md-2" placeholder="0"></input><Button color="info" className="col-md-2" onClick={()=>this.handleOrder(item.item, item.price)}>+</Button>
+                            <Button onClick={()=>this.handleRemoveDish(item.item)} color="secondary" className="col-md-offset-2 col-md-2">-</Button><input className="col-md-2" placeholder="0"></input><Button color="info" className="col-md-2" onClick={()=>this.handleOrder(item.item, item.price)}>+</Button>
                         </Row>
                       </Card>
                       )}
