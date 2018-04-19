@@ -13,6 +13,7 @@ class App extends Component {
     super(props)
     this.state = { 
       order:[],
+      dishCounter: 0,
       food: [{
         breakfast:[{
           item: "Club Sandwich",
@@ -141,10 +142,11 @@ class App extends Component {
     this.removeFromOrder=this.removeFromOrder.bind(this);
   }
 
-  upDateOrder(orders){
-    this.setState({order:orders})   
-    console.log(this.state); 
-  }
+  upDateOrder(item, price, quantity) {
+    const orderedDish = [{item: item, price: price, quantity: quantity}];
+    this.setState({
+      order: this.state.order.concat(orderedDish)})
+    }
 
   removeFromOrder(dishName){
     this.setState((currentState) => {
@@ -155,11 +157,12 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.order)
     const foodOptions = this.state.food[0];
     return (
       <div className = " row">
-        <Menu order={this.state.order} breakfast={foodOptions.breakfast} lunch={foodOptions.lunch} hamburguers={foodOptions.hamburguers} beverages={foodOptions.beverages} upDateOrder={this.upDateOrder} removeFromOrder={this.removeFromOrder}/>
-        <Order order ={this.state.order } className ="col-md-4 col-lg-4 offset-md-8 offset-lg-8"/>
+        <Menu order={this.state.order} dishCounter={this.state.dishCounter} breakfast={foodOptions.breakfast} lunch={foodOptions.lunch} hamburguers={foodOptions.hamburguers} beverages={foodOptions.beverages} upDateOrder={this.upDateOrder} removeFromOrder={this.removeFromOrder}/>
+        <Order order ={this.state.order} className ="col-md-4 col-lg-4 offset-md-8 offset-lg-8"/>
       </div>
     );
   }

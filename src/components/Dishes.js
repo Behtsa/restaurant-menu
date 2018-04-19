@@ -12,16 +12,23 @@ export default class Dishes extends Component {
         }
 
         handleOrder(item, price){
-            (this.props.order).push(
-                {
-                    item: item,
-                    price: price,
-                    quantity: 1
-                }
-            )
-            console.log(this.props.order);
-            this.props.upDateOrder(this.props.order)    
-        }
+            // console.log(this.props.order)
+            // let getDishNames = this.props.order.map(dish => dish.item)
+
+            // // console.log(this.props.order.find( item => item === item))
+            let finds = this.props.order.find( dish => dish.item === item)
+            if(finds === undefined){
+                this.props.upDateOrder(item, price, 1)
+            }else {
+                /*Check from here next commit*/
+                let newArray = this.props.order;
+                let newElement = newArray.find((dish, index) => {
+                    return dish.item === item;
+                })
+
+                console.log(newElement.quantity += 1)
+                console.log(newArray)
+        }}
 
         handleRemoveDish(item) {
           this.props.removeFromOrder(item);

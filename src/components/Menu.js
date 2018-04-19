@@ -5,10 +5,6 @@ import Dishes from './Dishes.js'
 import Welcome from './Welcome'
 import '../Menu.css';
 import { Route, Switch, Link } from 'react-router-dom';
-/*
-<Route exact path='/breakfast' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} food = {this.breakfast} />
-          }} />*/
 
 export default class Menu extends Component {
   constructor(props) {
@@ -40,16 +36,16 @@ export default class Menu extends Component {
         <Switch>
           <Route exact path='/' component = {Welcome} />
           <Route exact path='/breakfast' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.breakfast} />
+            return <Dishes order={this.props.order} dishCounter={this.props.dishCounter} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.breakfast} />
           }} />
           <Route exact path='/meals' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food={this.lunch} />
+            return <Dishes order={this.props.order} dishCounter={this.props.dishCounter} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food={this.lunch} />
           }} />
           <Route exact path='/hamburguers' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.hamburguers} />
+            return <Dishes order={this.props.order} dishCounter={this.props.dishCounter} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.hamburguers} />
           }} />
           <Route exact path='/beverages' render = {() => {
-            return <Dishes order={this.props.order} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.beverages} />
+            return <Dishes order={this.props.order} dishCounter={this.props.dishCounter} upDateOrder={this.props.upDateOrder} removeFromOrder={this.props.removeFromOrder} food = {this.beverages} />
           }} />
         </Switch>
       </div>

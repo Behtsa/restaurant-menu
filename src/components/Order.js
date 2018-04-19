@@ -10,7 +10,7 @@ export default class Order extends Component {
     }
 
     render () {        
-        console.log(this.props.order);
+        // console.log(this.props.order);
         let { order } = this.props;
         const total = order.map(item=>item.price)        
         
@@ -19,7 +19,7 @@ export default class Order extends Component {
                     <h1 className="display-3">Orden</h1>
                      {order.map(item=>{
                      return ( <Row>
-                                <Col><p className="lead text-left">{item.item}</p></Col>
+                                <Col><p className="lead text-left"><span>{item.quantity}-</span>{item.item}</p></Col>
                                 <Col><p className="lead text-right">{item.price}</p></Col>
                              </Row>) })}
                     <hr className="my-2" />
